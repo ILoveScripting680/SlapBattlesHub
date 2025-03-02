@@ -1,4 +1,16 @@
-local Library = loadstring(game:HttpGet("https://pastebin.com/raw/Q69rcHsK"))()
+-- Place ID for Slap Battles
+local slapBattlesPlaceId = 6403373529  -- This is the current PlaceId for Slap Battles
+
+-- Check if the player is in the right game
+if game.PlaceId ~= slapBattlesPlaceId then
+    -- Kick the player if they are not in the right game
+    game.Players.LocalPlayer:Kick("Go In The Right Game 'Slap Battles'!")
+else
+    -- Your code for executing the script when in Slap Battles
+    -- Example: print a message in the output
+    print("You are in the correct game! Executing script...")
+    
+    local Library = loadstring(game:HttpGet("https://pastebin.com/raw/Q69rcHsK"))()
 local Window = Library.CreateLib("Slap Battles Hub", "DarkTheme")
 
 local Tab = Window:NewTab("Home")
@@ -635,3 +647,5 @@ button.MouseButton1Click:Connect(function()
         warn("Library not found!")
     end
 end)
+
+end
